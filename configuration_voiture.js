@@ -28,27 +28,21 @@ function actionsFonctions (achatVoiture, optionAjout, option, optionSupp, prixTo
 	var achatVoitureMessage = prompt("Bonjour ! Voulez-vous acheter une voiture ? oui => 'true', non => 'false'");
 	if(achatVoitureMessage = true);
 		alert("Bienvenue chez Tesla!" + "Cette voiture est au prix de" + voiturePrix);
-		var optionAjout = prompt("Voulez-vous ajouter une option ? oui => 'true', non => 'false'");{
+		var optionAjout = prompt("Voulez-vous ajouter ou supprimer une option ? oui => 'oui', non => 'non'");{
 
 	
-		if(optionAjout = true){
+		if(optionAjout == 'oui'){
 			alert("Vous allez pouvoir choisir une option.")
 			var option = prompt("Choisissez une option: couleur =>'couleur',packSport => 'pack sport', packMuzik => 'pack muzik', moteur =>'moteur'");
 			prixTotal = voiturePrix + optionPrix;
 		}
-		else if(optionAjout = false){
-			alert("Vous ne voulez pas d'option");
-		}
 		
-		var optionSupp = prompt("Voulez-vous supprimer une option ? oui => 'true', non => 'false'")
-		else if(optionSupp = true){
+		else if(optionAjout == 'non'){
 			alert("Vous allez supprimez une option.");
 			prixTotal = voiturePrix - optionPrix;
 
 		}
-		else if(optionSupp = false){
-			alert("Vous ne voulez pas supprimer d'option.");
-		}
+		
 		else{
 			alert('Vous ne voulez pas d\'options.');
 		}
@@ -68,7 +62,7 @@ function actionsFonctions (achatVoiture, optionAjout, option, optionSupp, prixTo
 /************************/
 
 function options (optionAjout, option, moteur, prixTotal, voiturePrix, couleurPrix){
-	if (optionAjout = true){
+	if (optionAjout == 'oui'){
 		if(option == 'couleur')
 			alert("Nous avons 3 couleurs possibles");
 			var choixCouleur = prompt("quelle couleur voulez-vous?");
